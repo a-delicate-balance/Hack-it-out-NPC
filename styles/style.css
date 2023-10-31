@@ -1,0 +1,83 @@
+:root {
+    --mainColor : rgb(14, 231, 231);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: rgb(94, 232, 232);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS FOR NAVIGATION BAR */
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 2rem;
+}
+
+header .logo {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+}
+
+header .navBar {
+    padding: 0.5rem;
+}
+
+header .navBar a {
+    margin: 0.3rem 1rem;
+    color: white;
+    font-size: 1.15rem;
+}
+
+header .navBar a:hover {
+    text-decoration: underline;
+    color: var(--mainColor);
+}
+
+header .icons i {
+    font-size: 2rem;
+    color: white;
+    border: 1px solid white;
+    margin: 0px 0.4rem;
+    padding: 0.2rem;
+}
+
+header .icons i:hover {
+    color: var(--mainColor);
+}
+
+header .searchBarBox {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    border: 1px solid white;
+    padding: 2rem 1.5rem;
+    max-width: 200px;
+    width: 100%;
+
+}
+
+header .searchBarBox #searchBar {
+    width: 100%;
+}
