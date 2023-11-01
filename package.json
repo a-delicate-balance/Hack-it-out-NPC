@@ -1,0 +1,10 @@
+{
+  "name": "Hack-it-out-NPC",
+  "version": "alpha.01",
+  "description": "Early stage build no. 1",
+  "main": "index.js",
+  "repository": "git@github.com:a-delicate-balance/Hack-it-out-NPC.git",
+  "author": "Team NPC",
+  "license": "null",
+  "private": false
+}
