@@ -57,7 +57,7 @@ header .navBar a:hover {
 header .icons i {
     font-size: 2rem;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 0px 0.4rem;
     padding: 0.2rem;
 }
@@ -73,11 +73,36 @@ header .searchBarBox {
     right: 0px;
     border: 1px solid white;
     padding: 2rem 1.5rem;
-    max-width: 200px;
-    width: 100%;
-
+    max-width: 100vw;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(33, 30, 30);
+    align-items: center;
+    border-top: 1px solid rgb(48, 45, 45);
+    z-index: 1001;
+    clip-path: polygon(0 0 , 100% 0 , 100% 0 , 0 0);  /* note this property */
 }
 
-header .searchBarBox #searchBar {
+header .searchBarBox.active {
+    clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+}
+
+header .searchBarBox input#searchBar {
     width: 100%;
+    /* padding: 0.2rem; */
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+}
+
+header .searchBarBox label {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    margin: auto 1.3rem;
+}
+
+header .searchBarBox label:hover {
+    color: var(--mainColor);
 }
