@@ -12,7 +12,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100vw;
     height: 100vh;
-    background: url("/images/backg2.jpg") center / cover no-repeat;
+    background: url("/images/bg.avif") center / cover no-repeat;
 }
 
 .header {
@@ -240,9 +240,10 @@ form button:hover {
     justify-content: center;
     text-align: center;
     width: 100%;
-    background: url();
+    background: url("/images/bg2.avif");
     background-size: cover;
     background-position: center;
+    color: white;
 }
 
 .signupPage .formDetails {
@@ -257,8 +258,12 @@ form button:hover {
     margin-right: 0.5rem;
 }
 
-.popupLoginForm .signupPage {
+.popupLoginForm .signupPage, .popupLoginForm.show-signup .loginPage {
     display: none;
+}
+
+.popupLoginForm.show-signup .signupPage {
+    display: flex;
 }
 
 @media (max-width: 780px){
