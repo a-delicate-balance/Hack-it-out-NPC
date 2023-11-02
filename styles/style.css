@@ -37,6 +37,16 @@ header {
     padding: 1.3rem 2rem;
 }
 
+header #menuBar {
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    font-size: 1.25rem;
+    padding: 0.9rem;
+    cursor: pointer;
+    display: none;
+}
+
 #logo-img {
     width: 100%;
     max-height: 50px
@@ -44,18 +54,30 @@ header {
 
 header .navBar {
     padding: 0.5rem;
+    clip-path: polygon(0 0 , 100% 0 , 100% 0 , 0 0);
 }
 
 header .navBar a {
     margin: 0.3rem 1rem;
     color: white;
     font-size: 1.3rem;
+    border: 1px solid white;
 }
 
 header .navBar a:hover {
     text-decoration: underline;
     color: var(--mainColor);
 }
+
+
+
+header .navBar.active {
+    clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+}
+
+
+
+
 
 header .icons i {
     font-size: 2rem;
@@ -93,12 +115,8 @@ header .searchBarBox.active {
 
 header .searchBarBox input#searchBar {
     width: 100%;
-
-header .searchBarBox label {
-    cursor: pointer;
-    color: white;
-    font-size: 1.5rem;
-    margin: auto 1.3rem;
+    font-size: 1.1rem;
+    padding: 0.3rem;
 }
 
 header .searchBarBox label {
@@ -107,20 +125,410 @@ header .searchBarBox label {
     font-size: 1.5rem;
     margin: auto 1.3rem;
 }
+
+header .searchBarBox label {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    margin: auto 1.3rem;
+}
+
+.searchBarBox #searchBtn {
+    cursor: pointer;
+}
+
+
 
 header .searchBarBox label:hover {
     color: var(--mainColor);
 }
+
+/* @media (max-width:1200px) {
+    body{
+        font-size: 1rem;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width:990px) {
     header {
-        float: none;
-        display: block;
-        text-align: left;
+        padding: 2rem;
     }
-    #logo-img {
-        width: 100%;
-    }    
+    body section .home .content {
+        padding: 5rem;
+    }
+} */
 
-  }
+@media (max-width:1040px) {
+    header #menuBar {
+        display: initial;
+    }
+    header .navBar{
+        position: absolute;
+        top : 100%;
+        right: 0;
+        left: 0;
+        background-color: rgb(88, 81, 81);
+        border-top: 0.1rem solid rgb(76, 69, 69);
+        padding: 1rem , 2rem;
+    }
+    header .navBar a {
+        display: block;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+        background-color: rgb(19, 18, 18);
+    }
+}
+
+/* CSS FOR HOME PAGE */
+
+section {
+    margin: 5.9rem 0px;
+    padding: 2rem 9%;
+    
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;  
+    border: 1px solid red;
+}
+
+#homePage {
+    background: url("/images/backghome.jpg") center / cover no-repeat;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgb(11, 11, 11);  
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: white;
+    
+}
+
+/* CSS OF BOOK SECTION */
+
+.heading {
+    text-align: center;
+    padding: 2,5rem 0;
+}
+
+.heading span {
+    font-size: 3.5rem;
+    background-color:  rgb(212, 247, 247);
+    color:  rgb(6, 251, 251);
+    border-radius: 5px;
+    margin: 0.3rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: 600;
+    border: 2px solid black;
+    box-shadow: 0.2rem 0.2rem rgba(35, 34, 34 ,0.5);
+    text-transform: uppercase;
+}
+
+.heading span:hover{
+    background-color: rgb(6, 251, 251);
+    color: white;
+}
+
+.heading span.space {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.book .book2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    /* border: 1px solid black; */
+}
+
+.book .book2  img{
+    /* width: 100%; */
+    height: 400px;
+    /* margin-right: 2rem;  */
+}
+
+.book .book2 form {
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(19, 19, 19 , 0.5);
+    border-radius: 0.5rem;
+}
+
+.book .book2 form .inputBox {
+    padding: 0.5rem;
+}
+
+.book .book2 form .inputBox input , .book .book2 form .inputBox #doctor , #bookBtn {
+    width: 100%;
+    padding: 0.4rem;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    margin: 0.5rem 0px;
+    /* font-size: 1.2rem; */
+}
+
+.book .book2 form .inputBox label {
+    font-size: 1.1rem;
+    margin: 0.4rem 0px;
+    font-weight: 300;
+}
+
+.book .book2 form .inputBox #doctor{
+    background-color: white;
+}
+
+.book .book2 form .inputBox option {
+    margin: 0.1rem 0;
+    padding: 0.2rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    
+}
+
+.book .book2 form #bookBtn {
+    background-color: var(--mainColor);
+    color: white;
+    font-size: 1rem;
+    border: 1px solid black;
+    transition: 0.1s ease;
+}
+
+.book .book2 form #bookBtn:hover {
+    transform: scale(0.95 , 0.95);
+}
+
+/* CSS FOR SERVICES */
+
+.services .boxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin: 6rem auto;
+    gap: 3.8rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.services .boxContainer .box {
+    flex: 1 1 30rem;
+    /* border: 1px solid black; */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.services .boxContainer .box i {
+    font-size: 5rem;
+    margin: 2.2rem 0px;
+}
+
+.services .boxContainer .box i:hover {
+    color: rgb(39, 206, 206);
+}
+
+.services .boxContainer .box h3 {
+    font-size: 1.7rem;
+    color: rgb(37, 36, 36);
+    /* margin: 2.2rem 0px; */
+}
+
+.services .boxContainer .box p {
+    font-size: 1.1rem;
+    padding: 1rem;
+    color: rgb(70, 68, 68);
+}
+
+.services .boxContainer .box:hover {
+    box-shadow: 0 1rem 2rem rgba(13, 12, 12 , 0.5);
+}
+
+/* CSS FOR REVIEWS */
+
+.reviews .reviewSlider {
+    padding-bottom: 2rem;
+}
+
+.reviews .wrapper {
+    /* border: 1px solid black; */
+    padding: 1px;
+    margin-top: 2rem;
+}
+
+.reviews .box {
+    /* border: 1px solid black; */
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(19, 19, 19 , 0.5);
+    margin: 1rem 0px;
+}
+
+.reviews .box img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.reviews .box h3 {
+    color: rgb(24, 24, 24);
+    font-size: 1.8rem;
+}
+
+.reviews .box p {
+    font-size: 1.1rem;
+    color: rgb(72, 70, 70);
+    padding: 1rem 0;
+}
+
+.reviews .box i {
+    font-size: 1.3rem;
+    color: var(--mainColor);
+}
+
+/* CSS FOR CONTACT FORM */
+
+.contact .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1.5rem;
+    /* border: 1px solid black; */
+    margin: 3.5rem;
+}
+
+.contact .content .img{
+    max-width: 400px;
+    margin-right: 3rem;
+    /* height: 500px; */
+}
+
+.contact .content .img img{
+    width: 100%;
+    height: 100%;
+    padding: 0 auto;
+} 
+
+.contact .content form {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    flex: 1 1 35rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(21, 21, 21 , 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .content form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact .content form .inputBox input , .contact .content form textarea {
+    width: 49%;
+    margin: 0.6rem 0px;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #f7f7ff;
+}
+
+.contact .content form textarea {
+    height: 11rem;
+    resize: none;
+    width: 100%;
+}
+
+.contact .content form .btn {
+    background-color: var(--mainColor);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* CSS FOR FOOTER */
+
+.footer {
+    background-color: #333;
+
+}
+
+.footer .boxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer .boxContainer .box {
+    padding: 1rem 0;
+    flex: 1 1 2rem;
+}
+
+
+.footer .boxContainer .box h3 {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    color: white;
+}
+
+.footer .boxContainer .box p {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    color: rgb(155, 151, 151);
+}
+
+.footer .boxContainer .box a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    color: rgb(155, 151, 151);
+    display: block;
+}
+
+.footer .boxContainer .box a:hover {
+    color: var(--mainColor);
+    text-decoration: underline;
+}
+
+.footer .credits {
+    text-align: center;
+    padding: 1rem 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 3rem;
+    border-top: 1px solid black;
+}
+
+.footer span {
+    color: var(--mainColor);
+}

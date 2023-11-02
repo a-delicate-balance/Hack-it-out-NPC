@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Online Appointment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -12,17 +14,19 @@
     <!-- NAVIGATION BAR -->
 
     <header>
+        <div><i class="fas fa-bars" id="menuBar"></i></div>
+
         <a href="#" class="logo-container"><img id="logo-img" src="images/background_image.jpg" alt="Medical"></a>
         <nav class="navBar">
-            <a href="#home">HOME</a>
+            <a href="#homePage">HOME</a>
             <a href="#book">BOOK</a>
-            <a href="#sevices">SERVICES</a>
+            <a href="#services">SERVICES</a>
             <a href="#reviews">REVIEWS</a>
             <a href="#contact">CONTACT US</a>
         </nav>
         <div class="icons">
             <i class="fas fa-search" id="searchBtn"></i>
-            <a href="login.html"><i class="fas fa-user" id="userBtn"></i></a>
+            <a href="login.html"><i class="fas fa-user" id="userBtn" title="Back to Login Page"></i></a>
         </div>
         <form action="" class="searchBarBox">
             <input type="search" id="searchBar" placeholder="Search Here">
@@ -33,8 +37,286 @@
 
     <!-- HOME SECTION   -->
 
-    
+    <section class="home" id="homePage">
+        <div class="content">
+            <h3>Welcome to this amazing online appointment booking medium.</h3>
+            <p>Experience the seamless and hasslefree opportunity.</p>
+        </div>
+    </section>
 
+    <!-- BOOK SECTION -->
+
+    <section class="book" id="book">
+        <div class="heading">
+            <span>B</span>
+            <span>O</span>
+            <span>O</span>
+            <span>K</span>
+            <span class="space"></span>
+            <span>N</span>
+            <span>O</span>
+            <span>W</span>
+        </div>
+
+        <div class="book2">
+            <img src="images/booka1.jpg" alt="appointment booking" >
+            <form action="">
+                <div class="inputBox">
+                    <label>Enter your Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputBox">
+                    <label>Appointment Date</label>
+                    <input type="date" placeholder="Appointment Date">
+                </div>
+                <div class="inputBox">
+                    <label>Appointment Time</label>
+                    <input type="time" placeholder="Appointment Time">
+                </div>
+                <div class="inputBox">
+                    <label for="doctor" style="display: block;">Select your Doctor</label>
+                    <select name="Doctor" id="doctor">
+                        <option value=""></option>
+                        <option value="">dr piyush (specialist in medicine)</option>
+                        <option value="">dr paras (dermatologist)</option>
+                        <option value="">dr parth (opthalmologist)</option>
+                        <option value="">dr sanidhya (surgery)</option>
+                        <option value="">dr shyam (ENT)</option>
+                        <option value="">dr sagar (dietician)</option>
+                    </select>
+                </div>
+                <input type="submit" value="BOOK NOW" id="bookBtn">
+            </form>
+        </div>
+
+
+    </section>
+
+    <!-- SERVICES SECTION -->
+
+    <section id="services" class="services">
+        <div class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+        </div>
+
+        <div class="boxContainer">
+
+            <div class="box">
+                <i class="fas fa-clinic-medical"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, iste!</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, dicta.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-briefcase-medical"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, error.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-microscope"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nulla.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-procedures"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, pariatur.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-file-medical-alt"></i>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iusto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, porro?</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- REVIEW SECTION -->
+
+    <section class="reviews"id="reviews">
+
+        <div class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+            <span>s</span>
+        </div>
+
+        <div class="swiper mySwiper reviewSlider">
+            <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/doc1.jpg" alt="">
+                    <h3>Dr. Vibha Goel</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/doc2.jpg" alt="">
+                    <h3>Dr. Vineet Sagar</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="box">
+                    <img src="images/doc3.jpg" alt="">
+                    <h3>Dr. Virendar Sarwal</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="box">
+                    <img src="images/doc4.jpg" alt="">
+                    <h3>Dr. Yatender Deswal</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+
+                <div class="box">
+                    <img src="images/doc5.jpg" alt="">
+                    <h3>Dr. Jasmeet Kaur</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="swiper-slide">
+
+                <div class="box">
+                    <img src="images/doc6.jpg" alt="">
+                    <h3>Dr. Jagpal Pandher</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At qui quisquam odio aliquid possimus veritatis ut? Minus assumenda odio laboriosam.</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </section>
+
+<!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+        <div class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </div>
+
+        <div class="content">
+            <div class="img">
+                <img src="images/contact.jpg" alt="">
+            </div>
+
+            <form action="">
+                <div class="inputBox">
+                    <input type="name" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" class="btn" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+
+    <div class="footer">
+        <div class="boxContainer">
+            <div class="box">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex incidunt sequi aperiam quo ut vero nesciunt facilis reiciendis eveniet.</p>
+            </div>
+            <div class="box">
+                <h3>Branch Locations</h3>
+                <p>PGIMER, Sector 12, Chandigarh</p>
+                <p>GMCH 32, Chandigarh</p>
+                <p>GMSH 16, Chandigarh</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#homePage">HOME</a>
+                <a href="#book">BOOK</a>
+                <a href="#services">SERVICES</a>
+                <a href="#reviews">REVIEWS</a>
+                <a href="#contact">CONTACT US</a>
+            </div>
+            <div class="box">
+                <h3>Follow us</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Threads</p>
+                <p>Linkedin</p>
+            </div>
+        </div>
+        <h1 class="credits">Created by <span>Team PSP BRIGADE</span> | All Rights reserved</h1>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
