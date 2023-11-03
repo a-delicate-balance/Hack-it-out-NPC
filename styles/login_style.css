@@ -247,9 +247,10 @@ form button:hover {
 }
 
 .signupPage .formDetails {
-    background: url("/images/background_image.jpg");
+    background: url("/images/back.webp");
     background-size: cover;
     background-position: center;
+    color: black;
 }
 
 .signupPage .termCond {
